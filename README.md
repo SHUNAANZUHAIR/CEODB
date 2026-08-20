@@ -17,12 +17,14 @@ python3 -m http.server 8000
 ## Structure
 
 - `index.html` — everything (markup, styles, and vanilla JS) in one file.
-  All project data currently lives in the `projects` array near the top
-  of the `<script>` block — no backend yet.
+  Project data lives in the `projects` array and is persisted to the
+  browser's `localStorage` (key `ceodb.projects.v1`) on every add, edit,
+  and delete, so the dashboard always reflects the latest updates on
+  reload — no backend yet.
 
 ## Where to take it next
 
-- Persist `projects` (localStorage, or a small backend/API)
+- Swap localStorage for a small backend/API for multi-device access
 - Multi-user support / auth
 - Drag-to-resize or drag-to-move existing bars (currently: drag-to-create
   on the bottom lane, click-to-edit on existing bars)
